@@ -1,5 +1,7 @@
 # codex-state-inspector
 
+[![CI](https://github.com/rajaeiHoss/codex-state-inspector/actions/workflows/ci.yml/badge.svg)](https://github.com/rajaeiHoss/codex-state-inspector/actions/workflows/ci.yml)
+
 A small CLI for inspecting local Codex Desktop/CLI state.
 
 ## Goals
