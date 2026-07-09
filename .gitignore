@@ -3,4 +3,5 @@ target/
 .idea/
 *.iml
 codex-state-report.md
+local-state-baselines/
 .DS_Store

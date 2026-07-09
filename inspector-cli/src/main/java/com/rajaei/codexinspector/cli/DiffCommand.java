@@ -77,7 +77,9 @@ public final class DiffCommand implements Callable<Integer> {
             System.out.println("Global state semantic diff skipped because one or both source files are unavailable.");
         }
 
-        if (Files.isRegularFile(beforeRoot.resolve("state_5.sqlite")) && Files.isRegularFile(afterRoot.resolve("state_5.sqlite"))) {
+        if (beforeRoot.equals(afterRoot)) {
+            System.out.println("SQLite semantic diff skipped because both snapshots reference the same live root path. Use copied Codex directories for SQLite row-level comparison.");
+        } else if (Files.isRegularFile(beforeRoot.resolve("state_5.sqlite")) && Files.isRegularFile(afterRoot.resolve("state_5.sqlite"))) {
             var reader = new DefaultSqliteStateReader();
             var beforeCounts = reader.tableCounts(beforeRoot);
             var afterCounts = reader.tableCounts(afterRoot);
