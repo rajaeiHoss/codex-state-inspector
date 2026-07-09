@@ -32,3 +32,9 @@ jobs:
 
       - name: Smoke test CLI
         run: java -jar inspector-cli/target/inspector-cli-0.1.0-SNAPSHOT.jar --help
+
+      - name: Upload runnable CLI artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: codex-state-inspector-cli
+          path: inspector-cli/target/inspector-cli-0.1.0-SNAPSHOT.jar

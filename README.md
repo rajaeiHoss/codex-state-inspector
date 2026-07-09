@@ -23,6 +23,17 @@ mvn -q package
 java -jar inspector-cli/target/inspector-cli-0.1.0-SNAPSHOT.jar --help
 ```
 
+## Release
+
+Create a GitHub Release by pushing a semantic version tag:
+
+```bash
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+The release workflow publishes the runnable CLI JAR and a SHA-256 checksum.
+
 ## Commands
 
 ### Snapshot
