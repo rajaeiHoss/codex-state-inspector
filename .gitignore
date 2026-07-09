@@ -1,0 +1,6 @@
+target/
+*/target/
+.idea/
+*.iml
+codex-state-report.md
+.DS_Store
